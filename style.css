@@ -1,5 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+
+
 .block:hover{
     background-color: greenyellow;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    border: solid black 5px;
+    width: 960px;
+    height: 960px;
+}
+
+.row{
+    display: flex;
+    margin: 5px;
+    border: solid green 5px;
+    flex:1;
+}
+
+.block{
+    margin: 10px;
+    border: double pink 5px;
+    flex:1;
 
 }
 
