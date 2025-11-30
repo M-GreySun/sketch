@@ -1,6 +1,6 @@
 
-let row=4;
-let col=4;
+let row=16;
+let col=16;
 
 let container= document.createElement("div");
 container.classList.add("container");
@@ -11,12 +11,7 @@ rowOrigin.classList.add("row");
 
 
 let block= document.createElement("div");
-//block.setAttribute("style", "height: 100px; width: 100px; margin: 10px; border: double pink 5px;");
 block.classList.add("block");
-
-//rowOrigin.appendChild(blockOrigin);
-//container.appendChild(rowOrigin);
-
 
 for(let i=0; i< col; i++){
     let blockClone= block.cloneNode(true);
@@ -28,17 +23,16 @@ for(let i=0; i<row; i++){
     container.appendChild(rowClone);
 }
 
-//container.appendChild(rowOrigin);
 
 let blocks= document.querySelectorAll(".block");
 blocks.forEach((blockTemp)=>{
     blockTemp.addEventListener("mouseenter", ()=>{
-        blockTemp.textContent="The mouse touch me";
+        //blockTemp.setAttribute("style", "background-color: greenyellow");
     });
 });
 
 blocks.forEach((blockTemp) =>{
     blockTemp.addEventListener("mouseleave", ()=>{
-        blockTemp.textContent="";
+        //blockTemp.setAttribute("style", "background-color: white");
     });
 });

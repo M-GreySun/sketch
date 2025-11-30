@@ -9,30 +9,77 @@ body{
     justify-content: center;
 }
 
-
 .block:hover{
+/*
     background-color: greenyellow;
-
+*/
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    transform: scale(1.04);
 }
+
 .container{
     display: flex;
     flex-direction: column;
-    border: solid black 5px;
+    border: solid green 5px;
     width: 960px;
     height: 960px;
 }
 
 .row{
     display: flex;
-    margin: 5px;
-    border: solid green 5px;
     flex:1;
 }
 
 .block{
-    margin: 10px;
-    border: double pink 5px;
+/*   
+    border: solid black 1px;
+*/
+    
     flex:1;
+    background-color: grey;
+    opacity: 0;
+    transition: opacity 2s ease 0.4s, transform 0.8s ease;
+    transform: scale(1);
+
+    /*
+        transition: property name | duration | timing function | delay
+
+        Transitions is shorthand property for
+        transition-property | tansition-duration | transition-timing-function | transition-delay | transition-behavior
+
+            Basically dicates how to transitions the properties of an element
+
+                -The transition-property is the property that one wants to change
+
+                -The transition-duration and transition-delay is the time the takes for the transtion to
+                    to finish and how long the transition is delay respectively
+
+                -The transition-timing-function is a property that set how intermediate values are calculated
+                    for the css properties. In short it's how the transition is to take place
+                    -Some transition-timing-functions include the follwoing:
+                            Linear
+                            ease
+                            ease-int
+                            ease-out
+                            ease-int-out
+                            step-start
+                            step-end
+                            steps(number of steps, <jump-term>)
+                                -Some Jump-Terms:
+                                    jump-start
+                                    jump-end
+                                    jump-none
+                                    jump-both
+                                    start
+                                    end
+                                    step-start
+                                    step-end
+                            cubic-bezier(p1, p2, p3, p4)
+                                -Just note that p1 and p3 must be in the range of [0,1] inclusive
+                                -The just gives more control all of the above timing functions can be
+                                    done using cubic-bezier
+    */
 
 }
 
@@ -40,5 +87,7 @@ body{
     background-color: blueviolet;
     color: white;
     font-size: 20px;
+    
     border: double green 5px;
 }
+
