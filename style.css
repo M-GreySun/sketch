@@ -1,5 +1,11 @@
-.block{
-    width:100px;
-    height: 100px;
-    border: green;
+.block:hover{
+    background-color: greenyellow;
+
+}
+
+.test{
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    border: double green 5px;
 }
